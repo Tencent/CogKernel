@@ -730,9 +730,9 @@ app.post("/getAccessibilityTree", async (req, res) => {
     }
 
     const screenshotBuffer = await page.screenshot();
-    browserId = browserId.replace(/-/g, "");
-    pageId = pageId.replace(/-/g, "");
-    currentRound = currentRound.replace(/-/g, "");
+    // browserId = browserId.replace(/-/g, "");
+    // pageId = pageId.replace(/-/g, "");
+    // currentRound = currentRound.replace(/-/g, "");
     const fileName = `${browserId}@@${pageId}@@${currentRound}.png`;
     const filePath = path.join("/screenshots", fileName);
 
@@ -1059,9 +1059,9 @@ app.post("/takeScreenshot", async (req, res) => {
 
 app.post("/loadScreenshot", (req, res) => {
   const { browserId, pageId, currentRound } = req.body;
-  browserId = browserId.replace(/-/g, "");
-  pageId = pageId.replace(/-/g, "");
-  currentRound = currentRound.replace(/-/g, "");
+  // browserId = browserId.replace(/-/g, "");
+  // pageId = pageId.replace(/-/g, "");
+  // currentRound = currentRound.replace(/-/g, "");
   const fileName = `${browserId}@@${pageId}@@${currentRound}.png`;
   const filePath = path.join("/screenshots", fileName);
 

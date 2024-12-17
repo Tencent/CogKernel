@@ -202,6 +202,7 @@ class BaseModelConnection:
                                     f"Received token: {new_text}, time: {time.time() - start_time}"
                                 )
                                 start_time = time.time()
+                                yield new_text
                             except json.JSONDecodeError as e:
                                 print(f"parsing error: {e}")
                         buffer = b""
